@@ -17,7 +17,8 @@ public class Login extends Application {
         stage.show();
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException{
+        Data.parsefiles();
         launch(args);
     }
 }

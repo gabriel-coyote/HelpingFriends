@@ -6,7 +6,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cs2365_assignment_3.LoginController">
    <children>
-      <Pane fx:id="pane_login" prefHeight="400.0" prefWidth="500.0" visible="false">
+      <Pane fx:id="pane_login" prefHeight="400.0" prefWidth="500.0">
          <children>
             <TextField fx:id="textField_lastName" layoutX="187.0" layoutY="146.0" />
             <TextField fx:id="textField_rewardNum" layoutX="187.0" layoutY="200.0" />
@@ -37,7 +37,7 @@
             </Button>
             <Label fx:id="label_invalidLogin" alignment="CENTER" layoutX="123.0" layoutY="328.0" prefHeight="58.0" prefWidth="279.0" />
          </children></Pane>
-      <Pane fx:id="pane_createAccount" prefHeight="400.0" prefWidth="500.0">
+      <Pane fx:id="pane_createAccount" prefHeight="400.0" prefWidth="500.0" visible="false">
          <children>
             <TextField fx:id="textField_create_lastName" layoutX="176.0" layoutY="148.0" />
             <TextField fx:id="textField_create_firstName" layoutX="176.0" layoutY="111.0" />

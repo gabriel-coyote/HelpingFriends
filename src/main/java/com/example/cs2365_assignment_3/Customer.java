@@ -6,7 +6,7 @@ public class Customer {
     private String lastName;
     private String rewardNumber;
     private String eliteStatus;         //yes || no
-    private double discountPercentage;  // For Elite customers
+    private String discountPercentage;  // For Elite customers
     private String starsEarned;         // For Regular customers
     private String email;
     private String phoneNum;
@@ -38,10 +38,10 @@ public class Customer {
     public void seteliteStatus(String fname){
         eliteStatus= fname;
     }
-    public Double getdiscountPercentage(){
+    public String getdiscountPercentage(){
         return this.discountPercentage;
     }
-    public void setdiscountPercentage(double fname){
+    public void setdiscountPercentage(String fname){
         discountPercentage= fname;
     }
     public String getemail(){
@@ -51,7 +51,7 @@ public class Customer {
         email= fname;
     }
     public String getphoneNum(){
-        return this.email;
+        return this.phoneNum;
     }
     public void setphoneNum(String fname){
         email= fname;
@@ -69,7 +69,7 @@ public class Customer {
         this.lastName= "LASTNAME";
         this.rewardNumber= "NULL";
         this.eliteStatus= "NA";
-        this.discountPercentage = 0.0;
+        this.discountPercentage = "0.0";
         this.starsEarned = "NA";
         this.email="firstname.lastname@rNum.company.com";
         this.phoneNum="123-456-7890";
@@ -82,15 +82,15 @@ public class Customer {
      PRECONDITION: none
      POSTCONDITION: no return, just variables assigned
      */
-    public Customer(String fname, String lname, String rNum, String eStatus, double discountPercent, String stars, String Email, String pNum)
+    public Customer(String fname, String lname, String rNum, String eStatus,String stars_or_discount, String Email, String pNum)
     {
         this.firstName=fname;
         this.lastName= lname;
         this.rewardNumber= rNum;
         this.email= Email;
         this.eliteStatus= eStatus;
-        this.discountPercentage = discountPercent;
-        this.starsEarned = stars;
+        this.discountPercentage = stars_or_discount;
+        this.starsEarned = stars_or_discount;
         this.phoneNum= pNum;
     }
 

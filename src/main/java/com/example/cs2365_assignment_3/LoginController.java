@@ -80,7 +80,6 @@ public class LoginController {
             textField_create_lastName.getText(),
             "4444",
             "no",
-            0.0,
             "0",
             textField_create_email.getText(),
             textField_create_phoneNum.getText()
@@ -99,7 +98,7 @@ public class LoginController {
         //Check if login is valid in the LIST of customes in the Data class
         for( Customer customer: Data.customers){
             if(customer.getLastName().contains(textField_lastName.getText()) &&
-                    customer.getphoneNum().contains(textField_rewardNum.getText())){
+                    customer.getrewardNumber().contains(textField_rewardNum.getText())){
 
                 label_invalidLogin.setText(""); //Rest invalid login text
                 //Close Login Stage/Window
