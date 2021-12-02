@@ -52,7 +52,7 @@ public class LoginController {
         //Change to Store Page
         Stage StoreStage = new Stage();
         FXMLLoader FxmlLoader = new FXMLLoader(HelloApplication.class.getResource("store_view.fxml"));
-        Scene storeScene = new Scene(FxmlLoader.load(), 1280, 720);
+        Scene storeScene = new Scene(FxmlLoader.load(), 720, 720);
         StoreStage.setTitle("Store");
         StoreStage.setScene(storeScene);
         StoreStage.show();
