@@ -16,6 +16,7 @@ public class Data {
     static List<Cart> carts = new ArrayList<>();
 
     static int number_of_customers;
+    static int last_rewardNumber;
 
 
 

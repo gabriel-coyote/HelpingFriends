@@ -69,6 +69,7 @@ public class Customer {
         this.lastName= "LASTNAME";
         this.rewardNumber= "NULL";
         this.eliteStatus= "NA";
+        this.discountPercentage = 0.0;
         this.starsEarned = "NA";
         this.email="firstname.lastname@rNum.company.com";
         this.phoneNum="123-456-7890";
@@ -81,13 +82,14 @@ public class Customer {
      PRECONDITION: none
      POSTCONDITION: no return, just variables assigned
      */
-    public Customer(String fname, String lname, String rNum, String eStatus, String stars, String Email, String pNum)
+    public Customer(String fname, String lname, String rNum, String eStatus, double discountPercent, String stars, String Email, String pNum)
     {
         this.firstName=fname;
         this.lastName= lname;
         this.rewardNumber= rNum;
         this.email= Email;
         this.eliteStatus= eStatus;
+        this.discountPercentage = discountPercent;
         this.starsEarned = stars;
         this.phoneNum= pNum;
     }

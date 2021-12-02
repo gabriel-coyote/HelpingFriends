@@ -28,12 +28,28 @@ public class LoginController {
     private Button button_create;
     @FXML
     private Button button_login_page;
+
+    //Login Page
     @FXML
     private TextField textField_lastName;
     @FXML
     private TextField textField_rewardNum;
     @FXML
     private Label label_invalidLogin;
+
+    //Create account
+    @FXML
+    private Label label_create_Done;
+    @FXML
+    private TextField textField_create_lastName;
+    @FXML
+    private TextField textField_create_firstName;
+    @FXML
+    private TextField textField_create_email;
+    @FXML
+    private TextField textField_create_phoneNum;
+
+
 
 
 
@@ -49,6 +65,7 @@ public class LoginController {
 
     @FXML
     public void onLoginPageButton_click(){
+        label_create_Done.setText("");
         pane_createAccount.setVisible(false);
         pane_login.setVisible(true);
     }
@@ -56,6 +73,22 @@ public class LoginController {
     @FXML
     public void onCreateButton_click(){
 
+
+        //Make temp customer to add to lIST of customer in DATA
+        Customer tmpCustomer = new Customer(
+            textField_create_firstName.getText(),
+            textField_create_lastName.getText(),
+            "4444",
+            "no",
+            0.0,
+            "0",
+            textField_create_email.getText(),
+            textField_create_phoneNum.getText()
+        );
+
+        Data.customers.add(tmpCustomer);
+        label_create_Done.setText("Account created, return to login!");
+        label_create_Done.setTextFill(Color.GREEN);
     }
 
     @FXML

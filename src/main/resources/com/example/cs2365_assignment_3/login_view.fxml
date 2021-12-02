@@ -6,7 +6,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cs2365_assignment_3.LoginController">
    <children>
-      <Pane fx:id="pane_login" prefHeight="400.0" prefWidth="500.0">
+      <Pane fx:id="pane_login" prefHeight="400.0" prefWidth="500.0" visible="false">
          <children>
             <TextField fx:id="textField_lastName" layoutX="187.0" layoutY="146.0" />
             <TextField fx:id="textField_rewardNum" layoutX="187.0" layoutY="200.0" />
@@ -37,12 +37,12 @@
             </Button>
             <Label fx:id="label_invalidLogin" alignment="CENTER" layoutX="123.0" layoutY="328.0" prefHeight="58.0" prefWidth="279.0" />
          </children></Pane>
-      <Pane fx:id="pane_createAccount" prefHeight="400.0" prefWidth="500.0" visible="false">
+      <Pane fx:id="pane_createAccount" prefHeight="400.0" prefWidth="500.0">
          <children>
-            <TextField layoutX="176.0" layoutY="148.0" />
-            <TextField layoutX="176.0" layoutY="111.0" />
-            <TextField layoutX="176.0" layoutY="188.0" />
-            <TextField layoutX="176.0" layoutY="223.0" />
+            <TextField fx:id="textField_create_lastName" layoutX="176.0" layoutY="148.0" />
+            <TextField fx:id="textField_create_firstName" layoutX="176.0" layoutY="111.0" />
+            <TextField fx:id="textField_create_email" layoutX="176.0" layoutY="188.0" />
+            <TextField fx:id="textField_create_phoneNum" layoutX="176.0" layoutY="223.0" />
             <Label layoutX="64.0" layoutY="108.0" text="First Name:">
                <font>
                   <Font size="20.0" />
@@ -73,7 +73,7 @@
                   <Font size="20.0" />
                </font>
             </Button>
-            <Label alignment="CENTER" layoutX="31.0" layoutY="322.0" prefHeight="58.0" prefWidth="437.0" text="Your login info here ...PlaceHolder" />
+            <Label fx:id="label_create_Done" alignment="CENTER" layoutX="31.0" layoutY="322.0" prefHeight="58.0" prefWidth="437.0" />
             <Button fx:id="button_login_page" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#onLoginPageButton_click" text="Login Page">
                <font>
                   <Font size="20.0" />
