@@ -5,7 +5,7 @@ public class Customer {
     private String firstName;
     private String lastName;
     private String rewardNumber;
-    private String eliteStatus;
+    private String eliteStatus;         //yes || no
     private double discountPercentage;  // For Elite customers
     private String starsEarned;         // For Regular customers
     private String email;

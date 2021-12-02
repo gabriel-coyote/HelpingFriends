@@ -15,6 +15,8 @@ public class Data {
     static List<Product> products = new ArrayList<>();
     static List<Cart> carts = new ArrayList<>();
 
+    static int number_of_customers;
+
 
 
     public static void parsefiles() throws IOException{
@@ -23,4 +25,15 @@ public class Data {
     }
 
 
+    public static void parseCustomers() throws IOException{
+
+    }
+
+    public static void parseProducts() throws IOException{
+
+    }
+
+    public static void parseCart() throws IOException{
+
+    }
 }

@@ -8,8 +8,8 @@
    <children>
       <Pane fx:id="pane_login" prefHeight="400.0" prefWidth="500.0">
          <children>
-            <TextField layoutX="187.0" layoutY="146.0" />
-            <TextField layoutX="187.0" layoutY="200.0" />
+            <TextField fx:id="textField_lastName" layoutX="187.0" layoutY="146.0" />
+            <TextField fx:id="textField_rewardNum" layoutX="187.0" layoutY="200.0" />
             <Label alignment="CENTER" layoutX="195.0" layoutY="81.0" text="Login Page">
                <font>
                   <Font size="21.0" />
@@ -25,7 +25,7 @@
                   <Font size="21.0" />
                </font>
             </Label>
-            <Button layoutX="156.0" layoutY="261.0" mnemonicParsing="false" onAction="#onLoginButton_click" text="Login">
+            <Button fx:id="button_login" layoutX="156.0" layoutY="261.0" mnemonicParsing="false" onAction="#onLoginButton_click" text="Login">
                <font>
                   <Font size="20.0" />
                </font>
@@ -35,6 +35,7 @@
                   <Font size="20.0" />
                </font>
             </Button>
+            <Label fx:id="label_invalidLogin" alignment="CENTER" layoutX="123.0" layoutY="328.0" prefHeight="58.0" prefWidth="279.0" text="Label" />
          </children></Pane>
       <Pane fx:id="pane_createAccount" prefHeight="400.0" prefWidth="500.0" visible="false">
          <children>
