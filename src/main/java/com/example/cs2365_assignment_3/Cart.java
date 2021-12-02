@@ -4,26 +4,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Cart {
-    private int cartItems; //Amount of "carts" in the carts.txt
+
     static List<Integer> num_cartItems = new ArrayList<>();
     static List<String> rewardNumber_ofCart = new ArrayList<>();
     static List<Integer> cartItem_quantity = new ArrayList<>();
 
 
-    private String rewardNumber;
+    private String rewardNumber;    //User
     private double Price;  // For Elite Carts
-    private String CartNumber;
-    private int  cartNumber;
+    private String productNumber;
+    private int  productquantity;
 
 
 
     //getters and setters
-    public int getcartItems(){
-        return this.cartItems;
-    }
-    public void setcartItems(int fname){
-        cartItems= fname;
-    }
+
     public String getrewardNumber(){
         return this.rewardNumber;
     }
@@ -38,11 +33,17 @@ public class Cart {
     public void setPrice(double fname){
         Price= fname;
     }
-    public int getcartNumber(){
-        return this.cartNumber;
+    public String getproductNumber(){
+        return this.productNumber;
     }
-    public void setcartNumber(int fname){
-        Price= fname;
+    public void setproductNumber(String fname){
+        productNumber= fname;
+    }
+    public int getproductqunatity(){
+        return this.productquantity;
+    }
+    public void setproductquantity(int fname){
+        productquantity= fname;
     }
 
     /** NAME: Cart
@@ -53,11 +54,11 @@ public class Cart {
      */
     public Cart()
     {
-        this.cartItems= 0;
-        this.cartNumber=0;
+
+        this.productNumber="0000";
         this.rewardNumber= "rewardNumber";
         this.Price= 0.0;
-        this.CartNumber = "NA";
+        this.productquantity = 0;
     }
 
 
@@ -67,13 +68,13 @@ public class Cart {
      PRECONDITION: none
      POSTCONDITION: no return, just variables assigned
      */
-    public Cart(int cItems, int cNumber, String rewardnumber, double price, String Cartnumber)
+    public Cart( String cNumber, String rewardnumber, double price, int Cartnumber)
     {
-        this.cartItems= cItems;
-        this.cartNumber= cNumber;
+
+        this.productNumber= cNumber;
         this.rewardNumber= rewardnumber;
         this.Price= price;
-        this.CartNumber = Cartnumber;
+        this.productquantity = Cartnumber;
 
     }
 
@@ -86,6 +87,6 @@ public class Cart {
      */
     public String toString()
     {
-        return ("Number of Carts:\t\t\t\t" + cartNumber + "rewardNumber:" + rewardNumber + "\nNumber of Cart Items:\t\t\t" + cartItems  + "\nCart Number:\t\t\t" + CartNumber +  "\nAmount:\t\t\t" + Price);
+        return ("Number of Carts:\t\t\t\t" + productNumber + "rewardNumber:" + rewardNumber + "\nNumber of Cart Items:\t\t\t"+ "\nCart Number:\t\t\t" +productquantity+  "\nAmount:\t\t\t" + Price);
     }
 }
