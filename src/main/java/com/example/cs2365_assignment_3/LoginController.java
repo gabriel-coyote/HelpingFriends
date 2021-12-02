@@ -48,6 +48,10 @@ public class LoginController {
     @FXML
     public void onLoginButton_click() throws IOException {
 
+        //Close Login Stage/Window
+        Stage window;
+        window = (Stage) pane_login.getScene().getWindow();
+        window.close();
 
         //Change to Store Page
         Stage StoreStage = new Stage();
