@@ -1,7 +1,15 @@
 package com.example.cs2365_assignment_3;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Cart {
-    private int cartItems;
+    private int cartItems; //Amount of "carts" in the carts.txt
+    static List<Integer> num_cartItems = new ArrayList<>();
+    static List<String> rewardNumber_ofCart = new ArrayList<>();
+    static List<Integer> cartItem_quantity = new ArrayList<>();
+
+
     private String rewardNumber;
     private double Price;  // For Elite Carts
     private String CartNumber;
