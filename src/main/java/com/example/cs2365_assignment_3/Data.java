@@ -22,8 +22,8 @@ public class Data {
     static List<Product> products = new ArrayList<>();
     static List<Cart> carts = new ArrayList<>();
 
-    static int number_of_customers;
-    static int last_rewardNumber;
+    static int number_of_customers = 0;
+
 
 
 
@@ -69,6 +69,8 @@ public class Data {
                         System.out.println(tmpCustomer.getemail());
                         System.out.println(tmpCustomer.getphoneNum());
                         System.out.println();
+
+                        number_of_customers = number_of_customers + 1;
                         Data.customers.add(tmpCustomer);
                     }
 

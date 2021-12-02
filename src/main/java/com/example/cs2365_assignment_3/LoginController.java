@@ -78,15 +78,17 @@ public class LoginController {
         Customer tmpCustomer = new Customer(
             textField_create_firstName.getText(),
             textField_create_lastName.getText(),
-            "4444",
+            "1234",
             "no",
             "0",
             textField_create_email.getText(),
             textField_create_phoneNum.getText()
         );
 
+
+        Data.number_of_customers = Data.number_of_customers + 1;
         Data.customers.add(tmpCustomer);
-        label_create_Done.setText("Account created, return to login!");
+        label_create_Done.setText("Account created, return to login!\n LOGIN INFO:\nDefault Reward Number = 1234");
         label_create_Done.setTextFill(Color.GREEN);
     }
 
