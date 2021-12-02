@@ -102,6 +102,8 @@ public class LoginController {
             if(customer.getLastName().contains(textField_lastName.getText()) &&
                     customer.getrewardNumber().contains(textField_rewardNum.getText())){
 
+
+                StoreController.thisCustomer_rewardNum = customer.getrewardNumber();
                 label_invalidLogin.setText(""); //Rest invalid login text
                 //Close Login Stage/Window
                 Stage window;
