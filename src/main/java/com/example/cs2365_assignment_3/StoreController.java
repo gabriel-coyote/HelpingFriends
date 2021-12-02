@@ -72,12 +72,12 @@ public class StoreController {
 
 
         int item_quantity = Integer.valueOf(textField_itemQuantity.getText());
-        double price = item.getPrice() * item_quantity;
+        //double price = item.getPrice() * item_quantity;
         label_added.setText(item_quantity + " of Product - "+item.getproductName()+" added to cart");
         cart = new Cart(
                 item.getproductNumber(),
                 StoreController.thisCustomer_rewardNum,
-                price,
+                2.99,
                 item_quantity
         );
 
