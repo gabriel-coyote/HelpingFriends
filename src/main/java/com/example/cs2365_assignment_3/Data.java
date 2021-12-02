@@ -23,6 +23,7 @@ public class Data {
     static List<Cart> carts = new ArrayList<>();
 
     static int number_of_customers = 0;
+    static int number_of_products = 0;
 
 
 
@@ -30,6 +31,8 @@ public class Data {
     public static void parsefiles() throws IOException{
 
         parseCustomers();
+        parseProducts();
+        //parseCart();
 
     }
 
@@ -46,7 +49,8 @@ public class Data {
             File pointer = new File(Data.customersPath);
             Scanner pointRead = new Scanner(pointer); // opens file
             custCount = Integer.parseInt(pointRead.nextLine());
-            System.out.println(custCount);
+            Data.number_of_customers = custCount;
+            //System.out.println(custCount);
             try { //ArrayIndexOutOfBoundsException
                 try { //NoSuchElementException
                     while (pointRead.hasNextLine()) {
@@ -60,7 +64,7 @@ public class Data {
                                 pointRead.nextLine()
                                 );
 
-
+                        /*
                         System.out.println(tmpCustomer.getFirstName());
                         System.out.println(tmpCustomer.getLastName());
                         System.out.println(tmpCustomer.getrewardNumber()+ " ");
@@ -69,8 +73,9 @@ public class Data {
                         System.out.println(tmpCustomer.getemail());
                         System.out.println(tmpCustomer.getphoneNum());
                         System.out.println();
+                        */
 
-                        number_of_customers = number_of_customers + 1;
+
                         Data.customers.add(tmpCustomer);
                     }
 
@@ -78,6 +83,7 @@ public class Data {
                 {
                     return;
                 }
+
             } catch (NoSuchElementException f) // if element isnt found
             {
                 System.out.println("No such element exception,");
@@ -89,11 +95,60 @@ public class Data {
             System.out.println("File not found.");
         }
 
-        }
+    }
 
 
     public static void parseProducts() throws IOException{
+        int productCount;      //How many product in .txt file
 
+
+
+        try { //FileNotFoundException
+
+
+            File pointer = new File(Data.productsPath);
+            Scanner pointRead = new Scanner(pointer); // opens file
+            productCount = Integer.parseInt(pointRead.nextLine());
+            Data.number_of_products = productCount;
+            //System.out.println(productCount);
+            try { //ArrayIndexOutOfBoundsException
+                try { //NoSuchElementException
+                    while (pointRead.hasNextLine()) {
+                        Product tmpProduct = new Product(
+                                pointRead.nextLine(),
+                                pointRead.nextLine(),
+                                pointRead.nextLine(),
+                                pointRead.nextLine(),
+                                pointRead.nextLine()
+
+                        );
+
+
+                        System.out.println(tmpProduct.getproductName());
+                        System.out.println(tmpProduct.getDescription());
+                        System.out.println(tmpProduct.getPrice());
+                        System.out.println(tmpProduct.getImageFileName());
+                        System.out.println();
+
+
+                        Data.products.add(tmpProduct);
+                    }
+
+                } catch (ArrayIndexOutOfBoundsException f) // if we go past array
+                {
+                    return;
+                }
+
+            } catch (NoSuchElementException f) // if element isnt found
+            {
+                System.out.println("No such element exception,");
+            }
+
+
+        } catch (FileNotFoundException e) // if file dne
+        {
+            System.out.println("File not found.");
+        }
     }
 
     public static void parseCart() throws IOException{

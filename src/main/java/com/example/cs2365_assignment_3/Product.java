@@ -5,12 +5,9 @@ public class Product {
     private String productName;
     private String productNumber;
     private String Description;
-    private String eliteStatus;
     private double Price;  // For Elite Products
     private String imageFileName;         // For Regular Products
-    private String email;
-    private String phoneNum;
-    private int  quantityProduct;
+
 
 
 
@@ -39,12 +36,10 @@ public class Product {
     public void setPrice(double fname){
         Price= fname;
     }
-    public int getquantityProduct(){
-        return this.quantityProduct;
-    }
-    public void setquantityProduct(int fname){
-        Price= fname;
-    }
+    public void setImageFileName(String imgFile){ imageFileName = imgFile;}
+    public String getImageFileName(){return this.imageFileName;}
+
+
 
     /** NAME: Product
      PARAMETERS: none
@@ -57,6 +52,7 @@ public class Product {
         this.productName= "productName";
         this.productNumber= "productNumber";
         this.Description= "NULL";
+        this.Price = 0.0;
         this.imageFileName = "NA";
     }
 
@@ -67,12 +63,13 @@ public class Product {
      PRECONDITION: none
      POSTCONDITION: no return, just variables assigned
      */
-    public Product(String fname, String lname, String rNum, String stars)
+    public Product(String pname, String pNum, String descrip, String price, String img)
     {
-        this.productName=fname;
-        this.productNumber= lname;
-        this.Description= rNum;
-        this.imageFileName = stars;
+        this.productName=pname;
+        this.productNumber= pNum;
+        this.Description= descrip;
+        this.Price = Double.valueOf(price);
+        this.imageFileName = img;
 
     }
 
