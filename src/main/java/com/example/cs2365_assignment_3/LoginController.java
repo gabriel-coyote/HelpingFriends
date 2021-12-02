@@ -1,8 +1,13 @@
 package com.example.cs2365_assignment_3;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class LoginController {
 
@@ -38,6 +43,19 @@ public class LoginController {
     @FXML
     public void onCreateButton_click(){
 
+    }
+
+    @FXML
+    public void onLoginButton_click() throws IOException {
+
+
+        //Change to Store Page
+        Stage StoreStage = new Stage();
+        FXMLLoader FxmlLoader = new FXMLLoader(HelloApplication.class.getResource("store_view.fxml"));
+        Scene storeScene = new Scene(FxmlLoader.load(), 1280, 720);
+        StoreStage.setTitle("Store");
+        StoreStage.setScene(storeScene);
+        StoreStage.show();
     }
 
 }
